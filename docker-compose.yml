@@ -1,11 +1,9 @@
-version: '3'
-
 services:
   suno-api:
     build:
       context: .
-      args:
-        SUNO_COOKIE: ${SUNO_COOKIE}
+    environment:
+      - SUNO_COOKIE=${SUNO_COOKIE}
     volumes:
       - ./public:/app/public
     ports:
